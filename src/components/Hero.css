@@ -1,87 +1,196 @@
 .hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* allow top spacing to take effect */
   justify-content: center;
-  padding: 2rem;
+  padding: 4rem 2rem;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
 }
 
 .hero-content {
   max-width: 1200px;
   width: 100%;
-  text-align: center;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  padding-top: 6rem; /* more space from the top */
+}
+
+/* Decorative ellipse positioning */
+.hero-ellipse {
+  position: absolute;
+  top: -80px; /* slightly out of bounds for a soft edge */
+  right: -60px;
+  width: 420px;
+  height: auto;
+  z-index: 1; /* above background, behind content */
+  pointer-events: none; /* purely decorative */
+}
+
+@media (max-width: 1024px) {
+  .hero-ellipse {
+    width: 320px;
+    right: -40px;
+    top: -60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-ellipse {
+    width: 220px;
+    right: -30px;
+    top: -40px;
+    opacity: 0.85; /* keep it subtle on small screens */
+  }
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 700;
+  font-family: 'Orbitron', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
   color: white;
   margin-bottom: 1rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
+  
+}
+
+.hero-title .highlight-text {
+  background: linear-gradient(90deg, #0EE7FF 0%, #FF0C61 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 3rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1.5rem;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+  margin-bottom: 4rem;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.members-heading {
+  font-size: 1.5rem;
+  font-family: 'Orbitron', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  color: white;
+  margin-top: 3rem; /* add space between title area and cards */
+  margin-bottom: 2rem;
 }
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 .member-card {
-  background: white;
-  border-radius: 16px;
-  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  font-family: 'Orbitron', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
 }
 
 .member-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  border-color: rgba(0, 217, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 217, 255, 0.1);
 }
 
 .member-avatar {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   overflow: hidden;
-  margin-bottom: 1.5rem;
-  border: 4px solid #f3f4f6;
 }
 
 .member-avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.member-card:hover .member-avatar img {
+  filter: grayscale(0%);
+}
+
+.member-info-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+  z-index: 1;
 }
 
 .member-name {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  color: #1f2937;
-  margin-bottom: 0.5rem;
+  color: white;
+  margin-bottom: 0.25rem;
 }
 
 .member-role {
-  color: #6b7280;
-  margin-bottom: 1rem;
-  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
 }
 
 .member-skills {
@@ -92,12 +201,19 @@
 }
 
 .skill-tag {
-  background: #e5e7eb;
-  color: #374151;
+  background: rgba(0, 217, 255, 0.1);
+  color: #00d9ff;
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
   font-size: 0.875rem;
   font-weight: 500;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+}
+
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -106,15 +222,21 @@
   }
   
   .hero-subtitle {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
   
   .team-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
   }
   
-  .member-card {
-    padding: 1.5rem;
+  .hero-content {
+    text-align: center;
+  }
+  
+  .hero-subtitle,
+  .availability-badge {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
