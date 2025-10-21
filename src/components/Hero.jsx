@@ -1,16 +1,35 @@
 import { Link } from 'react-router-dom'
 import { teamMembers } from '../data/teamMembers'
+import heroBackground from '../assets/Home.png'
+import ellipseImg from '../assets/Ellipse.png'
 import './Hero.css'
 
 const Hero = () => {
   return (
     <div className="hero">
+      <div className="hero-background" style={{ backgroundImage: `url(${heroBackground})` }}></div>
+      {/* Decorative ellipse in top-right */}
+      <img
+        src={ellipseImg}
+        alt=""
+        aria-hidden="true"
+        className="hero-ellipse"
+      />
       <div className="hero-content">
-        <h1 className="hero-title">Our Amazing Team</h1>
+        <h1 className="hero-title">
+          G9 Team 2
+          <br />
+          Growth, Skill, <span className="highlight-text">Trust.</span>
+        </h1>
         <p className="hero-subtitle">
-          Meet the talented developers behind our innovative projects
+          We bring design and technology together to shape your digital dreams.
         </p>
+        <div className="availability-badge">
+          <span className="status-dot"></span>
+          Available for work
+        </div>
         
+        <h2 className="members-heading">Members</h2>
         <div className="team-grid">
           {teamMembers.map((member) => (
             <Link 
@@ -27,12 +46,9 @@ const Hero = () => {
                   }}
                 />
               </div>
-              <h3 className="member-name">{member.name}</h3>
-              <p className="member-role">{member.role}</p>
-              <div className="member-skills">
-                {member.skills.slice(0, 3).map((skill, index) => (
-                  <span key={index} className="skill-tag">{skill}</span>
-                ))}
+              <div className="member-info-overlay">
+                <h3 className="member-name">{member.name}</h3>
+                <p className="member-role">{member.role}</p>
               </div>
             </Link>
           ))}
