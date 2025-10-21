@@ -5,16 +5,19 @@ export const memberData = {
   // Basic Information
   name: 'Abderraouf Adel Garamida',
   role: 'Team Member',
-  github: 'adel66',
-  email: 'abderraouf@example.com',
+  github: 'https://github.com/adel66',
+  email: 'abderraouf.adel.garamida@ensia.edu.dz',
   linkedin: '',
   website: '',
   
   bio: 'Experienced developer with a passion for clean code and innovation. Always eager to learn new technologies and contribute to meaningful projects.',
   
   skills: [
-    'React', 'TypeScript', 'CSS', 'Git',
-    'JavaScript', 'HTML', 'Node.js', 'MongoDB'
+    "Development : Python/C++/C/Java and JavaScript .",
+    "Front-end : ReactJS,Flutter,JavaScript.",
+    "Back-end : MySQL,Oracle,Firebase,MongoDB.",
+    "Great communication skills.",
+    ""
   ],
   
   projects: [
