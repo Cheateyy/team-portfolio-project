@@ -8,7 +8,7 @@ import profileImage from '../../assets/SAJIDA.jpg';
 import backSvg from '../../assets/back.png';
 import fillImg from '../../assets/Fill.png'
 
-function AbderraoufPage() {
+function SadjedaPage() {
   return (
     <div className="memberPage">
 
@@ -47,4 +47,4 @@ function AbderraoufPage() {
   )
 }
 
-export default AbderraoufPage;
+export default SadjedaPage;
