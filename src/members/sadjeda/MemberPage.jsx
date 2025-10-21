@@ -1,47 +1,45 @@
+import React from "react";
+import { Link } from 'react-router-dom'
 import { memberData } from './memberData'
 import './MemberPage.css'
 
-const SadjedaPage = () => {
+
+import profileImage from '../../assets/SAJIDA.jpg';
+import backSvg from '../../assets/back.png';
+import fillImg from '../../assets/Fill.png'
+
+function AbderraoufPage() {
   return (
-    <div className="member-page">
-      <div className="member-header">
-        <div className="member-profile">
-          <div className="member-avatar-large">
-            <img 
-              src={`https://via.placeholder.com/200/8B5CF6/FFFFFF?text=${memberData.name.split(' ').map(n => n[0]).join('')}`}
-              alt={memberData.name}
-            />
-          </div>
-          <div className="member-info">
-            <h1 className="member-name-large">{memberData.name}</h1>
-            <p className="member-role-large">{memberData.role}</p>
-          </div>
-        </div>
+    <div className="memberPage">
+
+      <div className="left-side">
+        <Link to="/">
+        <button className="goback-btn"><img src={backSvg} alt="goback-img" className="goback-img" /></button>
+        </Link>
+        <img src={profileImage} alt="profile-image" className="profileImage" />
       </div>
 
-      <div className="member-content">
-        <div className="content-section">
-          <h2>About Me</h2>
-          <p className="member-bio">{memberData.bio}</p>
+      <div className="right-side">
+        <div className="upper-right">
+          <h1 id="member-name">I'm {memberData.name}</h1>
+          <p id="member-bio">{memberData.bio}</p>
         </div>
-
-        <div className="content-section">
-          <h2>Skills & Technologies</h2>
-          <div className="skills-grid">
+        <div className="lower-right">
+          <div className="skillsContainer">
+            <h1>Skills</h1>
             {memberData.skills.map((skill, index) => (
-              <div key={index} className="skill-item">
-                <span className="skill-name">{skill}</span>
-              </div>
+              <p key={index}>{skill}</p>
             ))}
           </div>
-        </div>
-
-        <div className="content-section">
-          <h2>Get In Touch</h2>
-          <div className="contact-info">
-            <p><strong>Email:</strong> {memberData.contact.email}</p>
-            <p><strong>Location:</strong> {memberData.contact.location}</p>
-            <p><strong>Availability:</strong> {memberData.contact.availability}</p>
+          <div className="contactContainer">
+            <div className="upper-contact">
+              <p>GIT</p>
+              <p id="vertical">HUB</p>
+            </div>
+            <div className="github-link">
+              <img src={fillImg} alt="fillImg" />
+              <a href={memberData.github}>My Github Profile Link</a>
+            </div>
           </div>
         </div>
       </div>
@@ -49,4 +47,4 @@ const SadjedaPage = () => {
   )
 }
 
-export default SadjedaPage
+export default AbderraoufPage;

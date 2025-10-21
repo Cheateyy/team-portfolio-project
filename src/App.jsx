@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import TeamMember from './pages/TeamMember'
 import './App.css'
 import AbderraoufPage from "./members/abderraouf/MemberPage";
+import SadjedaPage from "./members/sadjeda/MemberPage";
 
 function App() {
   return (
@@ -10,7 +11,9 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Hero />} />
-          <Route path="/member/abderraouf" element={<AbderraoufPage/>} />
+          <Route path="/member/abderraouf" element={<AbderraoufPage />} />
+          <Route path="/member/sadjeda" element={<SadjedaPage/>} />
+
         </Routes>
       </div>
     </Router>

@@ -33,7 +33,7 @@ export const teamMembers = [
     role: 'Team Member',
     bio: 'Creative problem solver with strong analytical skills.',
     skills: ['UI/UX Design', 'Frontend Development', 'User Research'],
-    avatar: 'https://via.placeholder.com/150/10B981/FFFFFF?text=SB'
+    avatar: 'src/assets/sadjeda2.jpg'
   },
   {
     id: 'minetellah',
