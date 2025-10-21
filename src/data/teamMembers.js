@@ -15,7 +15,7 @@ export const teamMembers = [
     role: 'Team Member',
     bio: 'Dedicated team member focused on delivering quality solutions.',
     skills: ['Web Development', 'Problem Solving', 'Team Collaboration'],
-    avatar: 'https://via.placeholder.com/150/4F46E5/FFFFFF?text=AM'
+    avatar: 'https://github.com/alilou-prog.png'
   },
   {
     id: 'abderraouf',
