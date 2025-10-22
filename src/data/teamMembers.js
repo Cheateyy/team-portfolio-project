@@ -1,3 +1,7 @@
+import sadjedaImg from '../assets/sadjeda2.jpg'
+import minetellahImg from '../assets/minetellah.jpg'
+import badisImg from '../assets/badis.jpg'
+
 export const teamMembers = [
   {
     id: 'abdellah',
@@ -33,7 +37,7 @@ export const teamMembers = [
     role: 'Team Member',
     bio: 'Creative problem solver with strong analytical skills.',
     skills: ['UI/UX Design', 'Frontend Development', 'User Research'],
-    avatar: 'src/assets/sadjeda2.jpg'
+    avatar: sadjedaImg
   },
   {
     id: 'minetellah',
@@ -42,7 +46,7 @@ export const teamMembers = [
     role: 'Team Member',
     bio: 'Detail-oriented developer with a focus on user experience.',
     skills: ['React', 'JavaScript', 'CSS', 'Responsive Design'],
-    avatar: 'src/assets/minetellah.jpg'
+    avatar: minetellahImg
   },
   {
     id: 'badis',
@@ -51,6 +55,6 @@ export const teamMembers = [
     role: 'Team Member',
     bio: 'Full-stack developer with expertise in modern web frameworks.',
     skills: ['React', 'Node.js', 'MongoDB', 'Express'],
-    avatar: 'src/assets/badis.jpg'
+    avatar: badisImg
   }
 ];

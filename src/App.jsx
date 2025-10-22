@@ -13,7 +13,7 @@ import AbdellahPage from "./members/abdellah/MemberPage";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/team-portfolio-project">
       <div className="App">
         <Routes>
           <Route path="/" element={<Hero />} />

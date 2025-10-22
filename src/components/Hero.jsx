@@ -42,7 +42,12 @@ const Hero = () => {
                   src={member.avatar} 
                   alt={member.name}
                   onError={(e) => {
-                    e.target.src = `https://via.placeholder.com/150/6366F1/FFFFFF?text=${member.name.split(' ').map(n => n[0]).join('')}`
+                    const initials = member.name.split(' ').map(n => n[0]).join('').slice(0,2).toUpperCase();
+                    const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='150' height='150'>`+
+                      `<rect width='100%' height='100%' fill='%236366F1'/>`+
+                      `<text x='50%' y='50%' dy='.35em' text-anchor='middle' fill='%23FFFFFF' font-size='56' font-family='Orbitron, Arial, sans-serif'>${initials}</text>`+
+                      `</svg>`;
+                    e.target.src = `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`
                   }}
                 />
               </div>
