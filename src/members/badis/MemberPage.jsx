@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 import { memberData } from './memberData'
-import './MemberPage.css'
+import '../abderraouf/MemberPage.css'
 
 //im adding a comment maybe that would allow a pull request <(o_o)>
 
