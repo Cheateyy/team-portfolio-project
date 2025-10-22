@@ -5,18 +5,19 @@ export const memberData = {
   // Basic Information
   name: 'Sadjeda Benhamed',
   role: 'Team Member',
-  github: null,
-  email: 'sadjeda@example.com',
+  github: 'https://github.com/sadjeda',
+  email: 'sadjeda.benhamed@ensia.edu.dz',
   linkedin: '',
   website: '',
   
-  bio: 'Creative problem solver with strong analytical skills. Passionate about creating user-friendly solutions and contributing to team success.',
-  
+  bio: "I’m Sadjeda Benhamed, a third-year Artificial Intelligence student with a strong interest in software development, web technologies, and problem-solving. I enjoy creating efficient and user-friendly applications while continuously learning new skills to enhance my expertise in the field.",
   skills: [
-    'UI/UX Design', 'Frontend Development', 'User Research',
-    'JavaScript', 'HTML', 'CSS', 'Design Thinking'
+  'Front-End: HTML, CSS, JavaScript, ReactJS',
+  'Back-End: PHP, SQL',
+  'Programming Languages: C++, Java, Python',
+  'Tools: Git, VS Code, MySQL'
   ],
-  
+
   projects: [
     // Add your projects here
   ],
@@ -30,7 +31,7 @@ export const memberData = {
   ],
   
   interests: [
-    'UI/UX Design', 'User Experience', 'Creative Problem Solving'
+    'Web development', 'fron-end', 'Creative Problem Solving'
   ],
   
   contact: {
