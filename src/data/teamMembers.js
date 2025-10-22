@@ -51,6 +51,6 @@ export const teamMembers = [
     role: 'Team Member',
     bio: 'Full-stack developer with expertise in modern web frameworks.',
     skills: ['React', 'Node.js', 'MongoDB', 'Express'],
-    avatar: 'https://github.com/badis-byte.png'
+    avatar: 'src/assets/badis.jpg'
   }
 ];
