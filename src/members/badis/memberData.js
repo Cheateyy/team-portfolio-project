@@ -5,7 +5,7 @@ export const memberData = {
   // Basic Information
   name: 'Badis Belkessam',
   role: 'Team Member',
-  github: 'github.com/badis-byte',
+  github: 'https://github.com/badis-byte',
   email: 'belkessambadis40@gmail.com',
   linkedin: '',
   website: '',
@@ -13,8 +13,7 @@ export const memberData = {
   bio: 'Full-stack developer with expertise in modern web frameworks. Passionate about building scalable applications and solving complex problems.',
   
   skills: [
-    'React', 'Node.js', 'MongoDB', 'Express',
-    'JavaScript', 'Python', 'Git', 'Full-Stack Development' , 'Django' , 'API Development'
+    'React', 'MongoDB', 'Python', 'Git', 'Full-Stack Development' , 'API Development'
   ],
   
   projects: [
