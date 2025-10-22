@@ -3,18 +3,19 @@
 
 export const memberData = {
   // Basic Information
-  name: 'Minetellah Chouit',
+  name: 'Minet Ellah Chouit',
   role: 'Team Member',
-  github: null,
-  email: 'minetellah@example.com',
+  github: 'https://github.com/minna-chouit',
+  email: 'minetellah.chouit@ensia.edu.dz',
   linkedin: '',
   website: '',
   
-  bio: 'Detail-oriented developer with a focus on user experience. Committed to creating responsive and accessible web applications.',
+  bio: 'Junior UI/UX designer passionate about creating clean, user-friendly digital experiences. Focused on web and mobile design, front-end development, and continuous learning to bridge creativity with technology.',
   
   skills: [
-    'React', 'JavaScript', 'CSS', 'Responsive Design',
-    'HTML', 'User Experience', 'Frontend Development'
+    'UI Design: Crafting visually appealing, consistent, and accessible interfaces using Figma.',
+    'UX Design: Conducting research, building user personas, and designing user flows to create smooth, meaningful experiences.',
+    'Time Management: Balancing multiple projects and meeting deadlines effectively.'
   ],
   
   projects: [

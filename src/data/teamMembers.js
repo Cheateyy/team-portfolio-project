@@ -42,7 +42,7 @@ export const teamMembers = [
     role: 'Team Member',
     bio: 'Detail-oriented developer with a focus on user experience.',
     skills: ['React', 'JavaScript', 'CSS', 'Responsive Design'],
-    avatar: 'https://via.placeholder.com/150/F59E0B/FFFFFF?text=MC'
+    avatar: 'src/assets/minetellah.jpg'
   },
   {
     id: 'badis',
