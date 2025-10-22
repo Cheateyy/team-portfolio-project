@@ -8,6 +8,7 @@ import AbderraoufPage from "./members/abderraouf/MemberPage";
 import AbdelaliPage from './members/abdelali/MemberPage';
 import BadisPage from "./members/badis/MemberPage";
 import MinetEllahPage from "./members/minetellah/MemberPage";
+import AbdellahPage from "./members/abdellah/MemberPage";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/member/abdelali" element={<AbdelaliPage />} />
           <Route path="/member/badis" element={<BadisPage/>} />
           <Route path="/member/minetellah" element={<MinetEllahPage/>} />
+          <Route path="/member/abdellah" element={<AbdellahPage/>} />
 
         </Routes>
       </div>

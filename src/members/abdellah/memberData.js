@@ -15,8 +15,7 @@ export const memberData = {
   
   // Skills & Technologies
   skills: [
-    'React', 'Node.js', 'JavaScript', 'TypeScript',
-    'Python', 'MongoDB', 'Express', 'Git',
+    'Full Stack', 'Mern', 'Django', 'Postgres',
     'Team Leadership', 'Project Management'
   ],
   
