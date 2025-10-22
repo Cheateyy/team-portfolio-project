@@ -14,7 +14,12 @@ function BadisPage() {
   return (
     <div className="memberPage">
 
-
+          <div className="left-side">
+        <Link to="/">
+        <button className="goback-btn"><img src={backSvg} alt="goback-img" className="goback-img" /></button>
+        </Link>
+        <img src={profileImage} alt="profile-image" className="profileImage" />
+      </div>
 
       <div className="right-side">
         <div className="upper-right">
